@@ -15,7 +15,6 @@ public class ArraysExamples {
         System.out.println(charArray[2]);
 
         int[] arr = new int[]{1, 2, 3, 4, 5};
-        arr[6] = 1;
 
         // newArr[0] = given element
         // newArr[1] => arr[0]
@@ -25,9 +24,6 @@ public class ArraysExamples {
         for(int i =0; i<arr.length; i++){
             bigArr[i] = arr[i];
         }
-
-        bigArr[6] = 1;
-        return bigArr;
 
 
          // 3000, 3004, 3008, 3012, 3016

@@ -15,7 +15,18 @@ public class ArraysExamples {
         System.out.println(charArray[2]);
 
         int[] arr = new int[]{1, 2, 3, 4, 5};
-        // 3000, 3004, 3008, 3012, 3016
+
+        // newArr[0] = given element
+        // newArr[1] => arr[0]
+        // newArr[2] => arr[1]
+        int[] bigArr = new int[10];
+        // copy
+        for(int i =0; i<arr.length; i++){
+            bigArr[i] = arr[i];
+        }
+
+
+         // 3000, 3004, 3008, 3012, 3016
 
         // calculation => location + size * (given index)
         // charArray[0] = 3000 + (4 x 0) = 3000

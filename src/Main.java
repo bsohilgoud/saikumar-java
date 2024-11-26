@@ -1,22 +1,26 @@
-import socket.ClientOrUser;
-import socket.MyServer;
+import spring.dependencyinjection.Circle;
+import spring.dependencyinjection.Rectangle;
+import spring.dependencyinjection.Shape;
+import spring.dependencyinjection.Triangle;
 
 import java.io.IOException;
-import java.net.ServerSocket;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
-        // Amazon server
-        MyServer amazon = new MyServer(1000);
-        amazon.start();
+//            // Conside triangle is old and outdated -> example MySQL speed 400ms
+//            Triangle triangle= new Triangle();
+//            triangle.draw();
+//
+//            // Example PostGRES = latest = 100ms
+//            Circle circle = new Circle();
+//            circle.draw();
 
-        Thread.sleep(2000);
+            //Abstraction
+            Shape shape = new Rectangle();
+            shape.draw();
 
-        System.out.println("::::::::Sai Kumar:::::::");
-        ClientOrUser.connect("localhost", 1000, "Sai Kumar");
-        Thread.sleep(5000);
-        System.out.println("::::::::Sohil:::::::");
-        ClientOrUser.connect("localhost", 1000, "Sohil");
+//            @Autowired
+//            Shape shape;
     }
 }
 

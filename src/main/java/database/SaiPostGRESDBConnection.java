@@ -12,15 +12,16 @@ public class SaiPostGRESDBConnection {
             Class<?> aClass = Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(dburl, userName, password);
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT city FROM matches WHERE team1='Chennai Super Kings'");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM matches WHERE team1='Chennai Super Kings'");
 
             ResultSetMetaData metaData = resultSet.getMetaData();
             int columnCount = metaData.getColumnCount();
             System.out.println("columnCount = " + columnCount);
+            metaData.getColumnName(1);
 
             System.out.println("Result: \n ");
             while(resultSet.next()){
-                System.out.println("City: " + resultSet.getString(1));
+                System.out.println(metaData.getColumnName(1) + resultSet.getString(1));
             }
 
         } catch (Exception e){
